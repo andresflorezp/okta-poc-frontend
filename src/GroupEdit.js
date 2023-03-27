@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import { Button, Container, Form, FormGroup, Input, Label } from 'reactstrap';
 import AppNavbar from './AppNavbar';
 
@@ -13,7 +13,7 @@ const GroupEdit = () => {
     postalCode: ''
   };
   const [group, setGroup] = useState(initialFormState);
-  const navigate = useNavigate();
+  const navigate = useHistory();
   const { id } = useParams();
 
   useEffect(() => {
